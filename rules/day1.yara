@@ -8,5 +8,7 @@ rule rat_stager
         $dropped_exe_2 = "VC_new2.exe" ascii wide
         $cmd = "/c ping" ascii wide 
     condition:
-        ($dropped_exe_1 or $dropped_exe_2) and $cmd)
+        uint16(0) == 0x5A4D 
+        and
+        (($dropped_exe_1 or $dropped_exe_2) and $cmd)
 }
