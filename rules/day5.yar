@@ -10,5 +10,5 @@ rule QuasarRAT
     $wmi_1 = "SELECT * FROM Win32_BIOS" ascii wide
     $wmi_2 = "SELECT * FROM Win32_BaseBoard" ascii wide
   condition:
-    any of ($wmi_*) and $reg_path and bat_1    
+    any of ($wmi_*) and $reg_path and $bat_1    
 }
