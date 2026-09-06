@@ -1,4 +1,5 @@
 rule AmethystStealer
+{
   meta:
     date = "2026-09-06"
     description = "Detects AmethystStealer of the SapphireStealer family"
