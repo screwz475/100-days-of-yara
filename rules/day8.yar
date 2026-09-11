@@ -8,7 +8,7 @@ rule Win32_keypass
   strings:
     $s1 = "IsolationAware function" ascii wide
     $s2 = "G:\Doc\My work (C++)\_New 2018\Encryption" ascii wide
-    $s3 = ".KEYPASS"
+    $s3 = ".KEYPASS" ascii wide
     $s4 = /.*\.ua.*/
   
   condition:
