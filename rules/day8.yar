@@ -6,11 +6,12 @@ rule Win32_keypass
     reference = "https://github.com/ytisf/theZoo/tree/master/malware/Binaries/Win32.KeyPass"
       
   strings:
+    $pe_header = "MZ"
     $s1 = "IsolationAware function" ascii wide
     $s2 = "G:\Doc\My work (C++)\_New 2018\Encryption" ascii wide
     $s3 = ".KEYPASS" ascii wide
     $s4 = /.*\.ua.*/
   
   condition:
-    all of them    
+    $pe_header at 0 and all of them 
 }
