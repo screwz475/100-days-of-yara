@@ -7,7 +7,7 @@ rule Win32_infostealer_dexter
       
   strings:
     $s1 = "(wa_~_~" ascii wide
-    $s2 = /w1921813174.*/gateway\.php/ ascii wide
+    $s2 = /w1921813174.*\/gateway\.php/ ascii wide
         
   
   condition:
