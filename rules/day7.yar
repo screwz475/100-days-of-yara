@@ -12,5 +12,5 @@ rule W32_swen
     $html_s1 = "<BR>I'm afraid ="
     $html_s2 = "<BR>I'm sorry ="
   condition:
-    all of them 
+    uint16(0) == 0x5A4D and all of them
 }
